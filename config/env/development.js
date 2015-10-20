@@ -24,7 +24,7 @@ if (fs.existsSync(envFile)) {
  */
 
 module.exports = {
-  db: 'mongodb://localhost/noobjs_dev',
+  	db: 'mongodb://' + (process.env.DB_1_PORT_27017_TCP_ADDR || 'localhost') + '/noobjs_dev',
   facebook: {
     clientID: process.env.FACEBOOK_CLIENTID,
     clientSecret: process.env.FACEBOOK_SECRET,
